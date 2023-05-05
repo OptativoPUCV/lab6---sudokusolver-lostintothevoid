@@ -65,7 +65,7 @@ List* get_adj_nodes(Node* n){
           Node* novo = copy(n);
           novo->sudo[i][j]=rand()%9;
           if(first(list) == NULL && is_valid(novo)){
-            list->size++;
+            pushFront(list, novo);
           }
           if(is_valid(novo)){
             pushCurrent(list, novo);

@@ -18,3 +18,15 @@ sudoku.c:68:17: error: invalid use of incomplete typedef ‘List’
       |                 ^~
 Compilation failed
 cc622a7
+Fri 05 May 2023 12:57:34 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:58:21: error: ‘i’ may be used uninitialized [-Werror=maybe-uninitialized]
+   58 |     novo->sudo[i][j]=1;
+      |     ~~~~~~~~~~~~~~~~^~
+sudoku.c:58:21: error: ‘j’ may be used uninitialized [-Werror=maybe-uninitialized]
+cc1: all warnings being treated as errors
+Compilation failed
+1bdbb5c
