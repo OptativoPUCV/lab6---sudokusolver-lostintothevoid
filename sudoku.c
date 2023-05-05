@@ -57,12 +57,7 @@ List* get_adj_nodes(Node* n){
       if(n->sudo[i][j]==0){
         Node* novo = copy(n);
         novo->sudo[i][j]=2;
-        if(first(list) == NULL){
-          pushFront(list, novo);
-        }
-        else{
-          pushCurrent(list, novo);
-        } 
+        pushBack(list, novo);
       }
     }
   }
