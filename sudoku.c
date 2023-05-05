@@ -45,7 +45,7 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-    return 1;
+    return 0;
 }
 
 
@@ -67,7 +67,7 @@ List* get_adj_nodes(Node* n){
           if(first(list) == NULL && is_valid(novo)){
             pushFront(list, novo);
           }
-          if(is_valid(novo)){
+          if(is_valid(novo)!=1){
             pushCurrent(list, novo);
           } 
         }
