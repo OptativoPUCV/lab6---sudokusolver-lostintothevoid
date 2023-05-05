@@ -55,7 +55,7 @@ List* get_adj_nodes(Node* n){
   
   if(n->sudo[0][0]==0){
     Node* novo = copy(n);
-    novo->sudo[i][j]=1;
+    novo->sudo[0][0]=rand()%9;
     pushFront(list, novo);
   }
   else{
