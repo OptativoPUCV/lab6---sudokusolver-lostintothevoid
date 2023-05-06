@@ -77,9 +77,9 @@ int numFila(Node* n){
         }
         else return 0;
       }
-      
     }
   }
+  return 0;
 }
 
 int is_valid(Node* n){
