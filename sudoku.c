@@ -120,6 +120,7 @@ List* get_adj_nodes(Node* n){
           novo->sudo[i][j]=k;
           if(is_valid(novo)) pushBack(list, novo);    
         }
+        return list;
       }
     }
   }
