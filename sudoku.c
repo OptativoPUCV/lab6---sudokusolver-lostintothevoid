@@ -42,19 +42,25 @@ void print_node(Node* n){
     }
     printf("\n");
 }
-/*
+
 int subMatriz(Node* n){
-  Node* novo = createNode();
-  novo =copy(n);
   int k,p; 
   for(k=0; k<9; k++){
+    int a[9]={0};
     for(p=0;p<9;p++){
       int i=3*(k/3) + (p/3) ;
       int j=3*(k%3) + (p%3) ;
+      if(n->sudo[i][j]!=0){
+        if(a[(n->sudo[i][j]-1)]==0){
+          a[(n->sudo[i][j]-1)]=1;
+        }
+        else return 0;
+      }
     }
   }
+  return 1;
 }
-*/
+
 int numColum(Node* n){
   int i, j;
   for(j=0; j<9; j++){
