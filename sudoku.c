@@ -96,13 +96,12 @@ int numFila(Node* n){
 int is_valid(Node* n){
   if(numFila(n)==1){
     if(numColum(n)==1){
-      return 1;
-      // if(subMatriz(n)==1){
-      //   return 1;
-      // }
-      // else{
-      // return 0; 
-      // }
+      if(subMatriz(n)==1){
+        return 1;
+      }
+      else{
+      return 0; 
+      }
     }
     else{
      return 0; 
