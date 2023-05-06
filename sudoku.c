@@ -54,18 +54,23 @@ int subMatriz(Node* n){
     }
   }
 }
-
+*/
 int numColum(Node* n){
-  Node* novo = createNode();
-  novo =copy(n);
   int i, j;
   for(j=0; j<9; j++){
+    int a[9]={0};
     for(i=0; i<9; i++){
-      
+      if(n->sudo[i][j]!=0){
+        if(a[(n->sudo[i][j]-1)]==0){
+          a[(n->sudo[i][j]-1)]=1;
+        }
+        else return 0;
+      }
     }
   }
+  return 1;
 }
-*/
+
 int numFila(Node* n){
   int i, j;
   for(i=0; i<9; i++){
@@ -79,23 +84,23 @@ int numFila(Node* n){
       }
     }
   }
-  return 0;
+  return 1;
 }
 
 int is_valid(Node* n){
   if(numFila(n)==1){
-    return 1;
-    // if(numColum(n)==1){
-    //   if(subMatriz(n)==1){
-    //     return 1;
-    //   }
-    //   else{
-    //   return 0; 
-    //   }
-    // }
-    // else{
-    //  return 0; 
-    // }
+    if(numColum(n)==1){
+      return 1;
+      // if(subMatriz(n)==1){
+      //   return 1;
+      // }
+      // else{
+      // return 0; 
+      // }
+    }
+    else{
+     return 0; 
+    }
   }
   else{
     return 0;
