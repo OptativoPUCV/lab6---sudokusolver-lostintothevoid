@@ -157,3 +157,36 @@ sudoku.c:77:1: error: control reaches end of non-void function [-Werror=return-t
 cc1: all warnings being treated as errors
 Compilation failed
 806844c
+Sat 06 May 2023 11:27:43 PM UTC: 
+ sudoku.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘subMatriz’:
+sudoku.c:53:11: error: unused variable ‘j’ [-Werror=unused-variable]
+   53 |       int j=3*(k%3) + (p%3) ;
+      |           ^
+sudoku.c:52:11: error: unused variable ‘i’ [-Werror=unused-variable]
+   52 |       int i=3*(k/3) + (p/3) ;
+      |           ^
+sudoku.c:47:9: error: variable ‘novo’ set but not used [-Werror=unused-but-set-variable]
+   47 |   Node* novo = createNode();
+      |         ^~~~
+sudoku.c: In function ‘numColum’:
+sudoku.c:59:9: error: variable ‘novo’ set but not used [-Werror=unused-but-set-variable]
+   59 |   Node* novo = createNode();
+      |         ^~~~
+sudoku.c: In function ‘subMatriz’:
+sudoku.c:56:1: error: control reaches end of non-void function [-Werror=return-type]
+   56 | }
+      | ^
+sudoku.c: In function ‘numColum’:
+sudoku.c:67:1: error: control reaches end of non-void function [-Werror=return-type]
+   67 | }
+      | ^
+sudoku.c: In function ‘numFila’:
+sudoku.c:83:1: error: control reaches end of non-void function [-Werror=return-type]
+   83 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+95346d0

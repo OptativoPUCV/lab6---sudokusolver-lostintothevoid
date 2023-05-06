@@ -69,9 +69,15 @@ int numColum(Node* n){
 int numFila(Node* n){
   int i, j;
   for(i=0; i<9; i++){
+    int a[9]={0};
     for(j=0; j<9; j++){
-      int a[9]={0};
-      if(n->)
+      if(n->sudo[i][j]!=0){
+        if(a[(n->sudo[i][j]-1)]==0){
+          a[(n->sudo[i][j]-1)]=1;
+        }
+        else return 0;
+      }
+      
     }
   }
 }
