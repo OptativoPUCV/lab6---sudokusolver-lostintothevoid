@@ -99,17 +99,12 @@ int is_valid(Node* n){
       if(subMatriz(n)==1){
         return 1;
       }
-      else{
-      return 0; 
-      }
+      else return 0; 
     }
-    else{
-     return 0; 
-    }
+    else return 0; 
   }
-  else{
-    return 0;
-  }
+  else  return 0;
+
 }
 
 
@@ -123,8 +118,7 @@ List* get_adj_nodes(Node* n){
           Node* novo = createNode();
           novo =copy(n);
           novo->sudo[i][j]=k;
-          pushBack(list, novo);
-                
+          if(is_valid(novo)) pushBack(list, novo);    
         }
       }
     }
