@@ -42,7 +42,7 @@ void print_node(Node* n){
     }
     printf("\n");
 }
-
+/*
 int subMatriz(Node* n){
   Node* novo = createNode();
   novo =copy(n);
@@ -65,7 +65,7 @@ int numColum(Node* n){
     }
   }
 }
-
+*/
 int numFila(Node* n){
   int i, j;
   for(i=0; i<9; i++){
@@ -84,17 +84,18 @@ int numFila(Node* n){
 
 int is_valid(Node* n){
   if(numFila(n)==1){
-    if(numColum(n)==1){
-      if(subMatriz(n)==1){
-        return 1;
-      }
-      else{
-      return 0; 
-      }
-    }
-    else{
-     return 0; 
-    }
+    return 1;
+    // if(numColum(n)==1){
+    //   if(subMatriz(n)==1){
+    //     return 1;
+    //   }
+    //   else{
+    //   return 0; 
+    //   }
+    // }
+    // else{
+    //  return 0; 
+    // }
   }
   else{
     return 0;

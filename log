@@ -190,3 +190,14 @@ sudoku.c:83:1: error: control reaches end of non-void function [-Werror=return-t
 cc1: all warnings being treated as errors
 Compilation failed
 95346d0
+Sat 06 May 2023 11:30:08 PM UTC: 
+ sudoku.c | 25 +++++++++++++------------
+ 1 file changed, 13 insertions(+), 12 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘numFila’:
+sudoku.c:83:1: error: control reaches end of non-void function [-Werror=return-type]
+   83 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+8cc597c
