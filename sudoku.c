@@ -60,7 +60,7 @@ List* get_adj_nodes(Node* n){
           novo =copy(n);
           novo->sudo[i][j]=k;
           pushBack(list, novo);
-        }
+          break;        }
       }
     }
   }
