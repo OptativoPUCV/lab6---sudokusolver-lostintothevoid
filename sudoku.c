@@ -43,9 +43,56 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+int subMatriz(Node* n){
+  Node* novo = createNode();
+  novo =copy(n);
+  int k,p; 
+  for(k=0; k<9; k++){
+    for(p=0;p<9;p++){
+      int i=3*(k/3) + (p/3) ;
+      int j=3*(k%3) + (p%3) ;
+    }
+  }
+}
 
+int numColum(Node* n){
+  Node* novo = createNode();
+  novo =copy(n);
+  int i, j;
+  for(j=0; j<9; j++){
+    for(i=0; i<9; i++){
+      
+    }
+  }
+}
+
+int numFila(Node* n){
+  int i, j;
+  for(i=0; i<9; i++){
+    for(j=0; j<9; j++){
+      int a[9]={0};
+      if(n->)
+    }
+  }
+}
+
+int is_valid(Node* n){
+  if(numFila(n)==1){
+    if(numColum(n)==1){
+      if(subMatriz(n)==1){
+        return 1;
+      }
+      else{
+      return 0; 
+      }
+    }
+    else{
+     return 0; 
+    }
+  }
+  else{
     return 0;
+  }
 }
 
 
