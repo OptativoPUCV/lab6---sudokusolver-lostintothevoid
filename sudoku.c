@@ -146,13 +146,35 @@ int is_final(Node* n){
   else return 0;
 }
 
+void insert(List* list, Stack* S){
+  Node* aux = first(list);
+  while(aux!=NULL){
+    push(S, aux);
+    aux=next(list);
+  }
+}
+
 Node* DFS(Node* initial, int* cont){
+  Stack* duracell= createStack();
+  push(duracell, initial);
+  Node* aux = createNode();
+  while(top(duracell)!=NULL){
+    aux= top(duracell);
+    pop(duracell);
+    if(is_final(aux)) return aux;
+    else{
+      cont++;
+      List* list=get_adj_nodes(aux);
+      insert(list, duracell);
+      free(aux);
+    }
+  }
   return NULL;
 }
 
 
 
-/*
+
 int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
@@ -163,4 +185,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}*/
+}
