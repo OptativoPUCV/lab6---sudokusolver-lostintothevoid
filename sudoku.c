@@ -129,7 +129,7 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
-  if(n->sudo[8][8])
+  if(is_valid(n)==1 && n->sudo[8][8])
     return 1;
   else return 0;
 }
