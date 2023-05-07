@@ -130,8 +130,12 @@ List* get_adj_nodes(Node* n){
 int finalBoss(Node *n, int i, int j){
   if(n->sudo[i][j]==0) return 0;
   if(n->sudo[i][j]!=0){
-    if(j>=0 && j<9) return finalBoss(n, i, j+1);
-    else  if(i>=0 && i<9) return finalBoss(n, i+1, 0);
+    j++;
+    if(j>=0 && j<9) return finalBoss(n, i, j);
+    else{
+      i++;
+      if(i>=0 && i<9) return finalBoss(n, i, 0);
+    }  
   }
   return 1;
 }
