@@ -129,7 +129,9 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
-  return 0;
+  if(n->sudo[8][8])
+    return 1;
+  else return 0;
 }
 
 Node* DFS(Node* initial, int* cont){
