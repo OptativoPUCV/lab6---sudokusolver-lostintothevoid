@@ -127,10 +127,18 @@ List* get_adj_nodes(Node* n){
   return list;
 }
 
+int finalBoss(Node *n, int i, int j){
+  if(n->sudo[i][j]==0) return 0;
+  if(n->sudo[i][j]!=0){
+    if(j>=0 && j<9) return finalBoss(n, i, j+1);
+    else  if(i>=0 && i<9) return finalBoss(n, i+1, 0);
+  }
+  return 1;
+}
 
 int is_final(Node* n){
-  if(is_valid(n)==1 && n->sudo[8][8])
-    return 1;
+  int i=0, j=0;
+  if(finalBoss(n, i, j)==1) return 1;
   else return 0;
 }
 
